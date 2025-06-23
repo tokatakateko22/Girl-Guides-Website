@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Organization</title>
+    <style>
+        :root {
+            --dark-green: #126435;
+            --yellow: #f8de1c;
+            --medium-green: #36792b;
+            --light-green: #63912c;
+            --gray: #c9d6ce;
+            --olive: #8faa2d;
+            --sage: #739683;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("WhatsApp Image 2025-01-20 at 16.35.16_fac2009a.jpg");
+            background-size: contain;
+            background-position: center 40px; /* Adjust the starting position to move the image down */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--dark-green);
+            padding: 10px 20px;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        .language-switcher {
+            margin-left: auto;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 16px;
+            background-color: var(--medium-green);
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .language-switcher:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+            color: var(--white);
+            border: 2px solid var(--yellow); /* Add a border with yellow color */
+            border-radius: 8px; /* Rounded corners for the container */
+            max-width: 600px; /* Restrict width for better readability */
+            margin: 50px auto; /* Center the container on the page */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+        }
+
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: var(--white);
+            color: var(--black);
+        }
+
+        footer a {
+            color: var(--dark-green);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Popup styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--white);
+            border: 2px solid var(--dark-green);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            z-index: 1000;
+            width: 300px;
+            text-align: center;
+        }
+
+        .popup .close-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: var(--dark-green);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .popup .close-btn:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        /* Overlay styles */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="D:\Toka\Markazeya's Website\307885140_433092092256147_295116132245560860_n.jpg" alt="Scout Logo">
+        <div class="navbar-links">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="about_us.html" data-en="About Us" data-ar="من نحن">About Us</a>
+            <a href="high_board.html" data-en="High Board" data-ar="المجلس">High Board</a>
+            <a href="committees.html" data-en="Committees" data-ar="اللجان">Committees</a>
+            <a href="activities.html" data-en="Activities" data-ar="الأنشطة">Activities</a>
+            <a href="resources.html" data-en="Resources" data-ar="الموارد">Resources</a>
+            <a href="signup_login.html" data-en="Sign Up / Login" data-ar="تسجيل الدخول / إنشاء حساب">Sign Up / Login</a>
+        </div>
+        <button class="language-switcher" id="language-switcher">العربية</button>
+    </nav>
+
+    <div class="container">
+        <h1 data-en="Welcome to Egyptian Girl Guides Association" data-ar="مرحبًا بكم في جمعية المرشدات المصرية">
+            Welcome to Egyptian Girl Guides Association
+        </h1>
+        <p data-en="Be Ready!" data-ar="كوني مستعدة!">Be Ready!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Egyptian Girl Guides Association. Designed with love and dedication. <a id="contact-us-link">Contact Us</a></p>
+    </footer>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup" id="popup">
+        <h2 data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h2>
+        <button class="close-btn" id="close-btn" data-en="Close" data-ar="إغلاق">Close</button>
+    </div>
+
+    <script>
+        const contactUsLink = document.getElementById('contact-us-link');
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('close-btn');
+        const languageSwitcher = document.getElementById('language-switcher');
+
+        contactUsLink.addEventListener('click', () => {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', () => {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        });
+
+        languageSwitcher.addEventListener('click', () => {
+            const currentLang = languageSwitcher.textContent.trim();
+            const isArabic = currentLang === 'العربية';
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+            });
+
+            languageSwitcher.textContent = isArabic ? 'English' : 'العربية';
+            document.documentElement.lang = isArabic ? 'ar' : 'en';
+            document.body.style.direction = isArabic ? 'rtl' : 'ltr';
+        });
+    </script>
+
+</body>
+</html>
