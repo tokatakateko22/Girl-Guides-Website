@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Organization</title>
+    <style>
+        :root {
+            --dark-green: #126435;
+            --yellow: #f8de1c;
+            --medium-green: #36792b;
+            --light-green: #63912c;
+            --gray: #c9d6ce;
+            --olive: #8faa2d;
+            --sage: #739683;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--white);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--dark-green);
+            padding: 10px 20px;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        .language-switcher {
+            margin-inline-start: auto;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 16px;
+            background-color: var(--medium-green);
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .language-switcher:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: var(--medium-green);
+            color: var(--white);
+        }
+
+        footer a {
+            color: var(--yellow);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .committee {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            background-color: var(--gray);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .committee h3 {
+            margin: 0 0 10px;
+            color: var(--dark-green);
+        }
+
+        .committee button {
+            padding: 10px 20px;
+            background-color: var(--dark-green);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .committee button:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+    </style>
+    <link rel="stylesheet" href="../css/training_leadership.css">
+</head>
+<body dir="rtl" lang="ar">
+
+    <nav class="navbar">
+        <img src="../assets/scoutLogo.jpg" alt="Scout Logo">
+        <div class="navbar-links">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">الرئيسية</a>
+            <a href="about_us.html" data-en="About Us" data-ar="من نحن">من نحن</a>
+            <a href="high_board.html" data-en="High Board" data-ar="المجلس الأعلى">المجلس الأعلى</a>
+            <a href="committees.html" data-en="Committees" data-ar="اللجان">اللجان</a>
+            <a href="activities.html" data-en="Activities" data-ar="الأنشطة">الأنشطة</a>
+            <a href="resources.html" data-en="Resources" data-ar="الموارد">الموارد</a>
+            <a href="signup_login.html" data-en="Sign Up / Login" data-ar="تسجيل الدخول / إنشاء حساب">تسجيل الدخول / إنشاء حساب</a>
+        </div>
+        <button class="language-switcher" id="language-switcher">English</button>
+    </nav>
+
+    <div class="learning-hub-layout">
+        <div class="left-panel">
+            <img src="../assets/scout.png" alt="Scout Logo" class="hub-logo" />
+            <h2 data-en="Training and Leadership Development Committee" data-ar="لجنة التدريب والتنمية القيادية">لجنة التدريب والتنمية القيادية</h2>
+            <h3 data-en="Values the committee focuses on in its strategy" data-ar="القيم التي ترتكز عليها اللجنه في إستراتيجيتها">القيم التي ترتكز عليها اللجنه في إستراتيجيتها</h3>
+            <p data-en="Justice" data-ar="العدالة"><strong>العدالة</strong></p>
+            <p data-en="Belonging" data-ar="الانتماء"><strong>الانتماء</strong></p>
+            <p data-en="Transparency" data-ar="الشفافية"><strong>الشفافية</strong></p>
+            <p data-en="Integrity" data-ar="النزاهة"><strong>النزاهة</strong></p>
+            <p data-en="Cooperation" data-ar="التعاون"><strong>التعاون</strong></p>
+            <p data-en="Creativity" data-ar="الابداع"><strong>الابداع</strong></p>
+            <p data-en="Professionalism" data-ar="المهنية"><strong>المهنية</strong></p>
+        </div>
+
+        <div class="right-panel">
+            <div class="banner-card">
+                <img src="../assets/background.jpg" alt="Celebration" />
+                <h1 data-en="Welcome to the Training and Leadership Development Committee" data-ar="اهلا بكم في لجنة التدريب والتنمية القيادية">اهلا بكم في لجنة التدريب والتنمية القيادية</h1>
+            </div>
+
+            <div class="text-card">
+                <h3 data-en="Vision" data-ar="الرؤية">الرؤية</h3>
+                <p data-en="To achieve local leadership and excellence in developing the skills and knowledge of Girl Guides and in creating diverse training programs." 
+                   data-ar="أن تصل اللجنة للريادة والتميز محلياً في تنمية المهارات والمعارف للقائدات المنتميات للحركة الارشادية ، وكذلك في تطوير البرامج التدريبية المختلفة">
+                   أن تصل اللجنة للريادة والتميز محلياً في تنمية المهارات والمعارف للقائدات المنتميات للحركة الارشادية ، وكذلك في تطوير البرامج التدريبية المختلفة
+                </p>
+            </div>
+
+            <div class="text-card">
+                <h3 data-en="Strategic Goals for 2025" data-ar="الأهداف الاستراتيجية للجنة التدريب والتنمية القيادية لجمعية المرشدات المصرية عن عام 2025">الأهداف الاستراتيجية للجنة التدريب والتنمية القيادية لجمعية المرشدات المصرية عن عام 2025</h3>
+                <p data-en="Empowering more leaders, developing modern training curricula, and expanding the scope of leadership programs." 
+                   data-ar="تمكين أكبر عدد من القائدات وتأهيلهم, تطوير مناهج تدريبية حديثة و توسيع نطاق برامج التدريب القيادي">
+                   تمكين أكبر عدد من القائدات وتأهيلهم, تطوير مناهج تدريبية حديثة و توسيع نطاق برامج التدريب القيادي
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p data-en="© 2025 Egyptian Girl Guides Association. Designed with love and dedication." 
+           data-ar="© 2025 جمعية المرشدات المصرية. تم التصميم بكل حب وإخلاص.">
+            © 2025 جمعية المرشدات المصرية. تم التصميم بكل حب وإخلاص. 
+            <a id="contact-us-link" data-en="Contact Us" data-ar="تواصل معنا">تواصل معنا</a>
+        </p>
+    </footer>
+
+    <script>
+        const languageSwitcher = document.getElementById('language-switcher');
+
+        languageSwitcher.addEventListener('click', () => {
+            const isArabic = document.body.dir === 'rtl';
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = isArabic ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+            });
+
+            document.body.dir = isArabic ? 'ltr' : 'rtl';
+            document.documentElement.lang = isArabic ? 'en' : 'ar';
+            languageSwitcher.textContent = isArabic ? 'العربية' : 'English';
+        });
+    </script>
+
+</body>
+</html>
