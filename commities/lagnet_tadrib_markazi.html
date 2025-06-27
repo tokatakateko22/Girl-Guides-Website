@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Organization</title>
+    <style>
+        :root {
+            --dark-green: #126435;
+            --yellow: #f8de1c;
+            --medium-green: #36792b;
+            --light-green: #63912c;
+            --gray: #c9d6ce;
+            --olive: #8faa2d;
+            --sage: #739683;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--white);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--dark-green);
+            padding: 10px 20px;
+        }
+
+        .navbar img {
+            height: 50px;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        .language-switcher {
+            margin-inline-start: auto;
+            color: var(--white);
+            cursor: pointer;
+            font-size: 16px;
+            background-color: var(--medium-green);
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .language-switcher:hover {
+            background-color: var(--yellow);
+            color: var(--dark-green);
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: var(--gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--dark-green);
+}
+
+.profile-details {
+    text-align: right;
+    flex: 1;
+}
+
+.profile-details h3 {
+    margin: 0;
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+.profile-details h4 {
+    margin: 5px 0;
+    color: var(--medium-green);
+    font-size: 16px;
+}
+
+.profile-details p {
+    margin: 10px 0 0;
+    color: #333;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-details {
+        text-align: center;
+    }
+}
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: var(--medium-green);
+            color: var(--white);
+        }
+
+        footer a {
+            color: var(--yellow);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+    .alt-profile-cards-container,
+.alt-profile-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* This ensures only the first card appears centered on its own */
+.single-profile-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.alt-profile-card {
+    width: 280px;
+    background-color: var(--gray);
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    direction: rtl;
+}
+
+.alt-profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.alt-profile-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.profile-details {
+    padding: 20px;
+}
+
+.profile-details h3 {
+    margin: 0 0 8px;
+    color: var(--dark-green);
+    font-size: 20px;
+    text-align: center;
+}
+
+.profile-details h4 {
+    margin: 0 0 6px;
+    color: var(--medium-green);
+    font-size: 16px;
+    text-align: center;
+}
+
+.profile-details p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin: 6px 0 0;
+    text-align: center;
+}
+
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="../assets/scoutLogo.jpg" alt="Scout Logo">
+        <div class="navbar-links">
+            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="about_us.html" data-en="About Us" data-ar="من نحن">About Us</a>
+            <a href="high_board.html" data-en="High Board" data-ar="المجلس الأعلى">High Board</a>
+            <a href="committees.html" data-en="Committees" data-ar="اللجان">Committees</a>
+            <a href="activities.html" data-en="Activities" data-ar="الأنشطة">Activities</a>
+            <a href="resources.html" data-en="Resources" data-ar="الموارد">Resources</a>
+            <a href="signup_login.html" data-en="Sign Up / Login" data-ar="تسجيل الدخول / إنشاء حساب">Sign Up / Login</a>
+        </div>
+        <button class="language-switcher" id="language-switcher">العربية</button>
+    </nav>
+
+    <h2 style="text-align:center; color: var(--dark-green); font-size: 28px; margin-top: 40px;">لجنة التدريب المركزي</h2>
+
+<!-- First row: one card -->
+<div class="single-profile-card-container">
+    <div class="alt-profile-card">
+        <img src="../assets/monaAmin.png" alt="منى امين مرسي">
+        <div class="profile-details">
+            <h3>منى امين مرسي</h3>
+            <h4>قائدة تدريب</h4>
+            <h4>ليسانس اداب قسم تاريخ</h4>
+            <p><strong>مفوضة التدريب الاهلي عضو اللجنة الاقليمية العربية</strong></p>
+            <p><strong>عضو لجنة التدريب والتنمية القيادية بالاتحاد العام للكشافة والمرشدات</strong></p>
+        </div>
+    </div>
+</div>
+
+<!-- Grid for remaining cards -->
+<div class="alt-profile-cards-grid">
+    <!-- Repeat this block for each additional card -->
+    <div class="alt-profile-card">
+        <img src="../assets/dinaEbrahim.png" alt="منى امين مرسي">
+        <div class="profile-details">
+            <h3>دينا ابراهيم عبده سرحان</h3>
+            <h4>قائدة تدريب</h4>
+            <h4>بكالوريوس تربيه رياضية </h4>
+            <p><strong>عضو لجنه التدريب وتنمية القيادات بالاتحاد العام للكشافة والمرشدات</strong></p>
+            <p><strong>عضو لجنه التدريب وتنمية القيادات المركزي بجمعية المرشدات المركزية</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/hebaMostafa.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>هبة مصطفي عثمان</h3>
+            <h4>قائدة تدريب</h4>
+            <p><strong>عضو لجنه التدريب وتنمية القيادات المركزي بجمعية المرشدات المركزية</strong></p>
+            <p><strong>ومنسق لجنة التدريب بالاقليم العربي للمرشدات</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/asmaaRezk.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>اسماء رزق دردير</h3>
+            <h4>قائدة تدريب</h4>
+            <h4> بكالوريوس تربيه رياضيه</h4>
+            <h4> قائدة تدريب ومفوضة تدريب فرع اسيوط</h4>
+            <p><strong>حاصلة علي دبلومة التربية الخاصة تخصص ذوي الاحتياجات الخاصة</strong></p>
+            <p><strong>مسئولة المرشدات المركزية باسيوط وعضو لجنة تحكيم بالإدارة العامة</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/monaKhalifa.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>مني خليفة عبد الجليل</h3>
+            <h4>قائدة تدريب</h4>
+            <h4>ليسانس اداب وتربية</h4>
+            <p><strong>مفوضة تدريب فرع اسوان</strong></p>
+            <p><strong>عضو لجنه التدريب المركزي</strong></p>
+            <p><strong>مساعد منسق لجنة الدعم الفني بالاقليم العربي للمرشدات</strong></p>
+            <p><strong>هاتف : 01147665611</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/safwat.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>صفوت أبوالعنين احمد شلبي</h3>
+            <h4>قائدة تدريب</h4>
+            <h4>دكتوراه التدريب الرياضي.. العاب قوي</h4>
+            <h4>مدير إدارة الجواله والخدمة العامة والمعسكرات بجامعة كفر الشيخ</h4>
+            <p><strong>مفوضه تدريب فرع كفر الشيخ</strong></p>
+            <p><strong>عضو لجنه التدريب المركزيه</strong></p>
+            <p><strong>هاتف : 01092293191</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/omneyaElsayed.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>امنية السيد العركي</h3>
+            <h4>الشارة الوطنية</h4>
+            <h4>دكتوراة مهنية فى إدارة الازمات والمخاطر</h4>
+            <p><strong>عضو مجلس إدارة فرع الاسماعيلية</strong></p>
+            <p><strong>عضو لجنة التدريب والتنمية القيادية المركزية</strong></p>
+            <p><strong>مقررة لجنة تنمية المجتمع والشراكات</strong></p>
+            <p><strong>متطوعة بلجنة تنمية الموارد والتمويل</strong></p>
+            <p><strong>هاتف : 01027772299</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/monaAmin.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>منى امين مرسي</h3>
+            <h4>ليسانس اداب قسم تاريخ</h4>
+            <h4>قائدة تدريب</h4>
+            <p><strong>مفوضة التدريب الاهلي عضو اللجنة الاقليمية العربية</strong></p>
+            <p><strong>عضو لجنة التدريب والتنمية القيادية بالاتحاد العام للكشافة والمرشدات</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/monaAmin.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>منى امين مرسي</h3>
+            <h4>ليسانس اداب قسم تاريخ</h4>
+            <h4>قائدة تدريب</h4>
+            <p><strong>مفوضة التدريب الاهلي عضو اللجنة الاقليمية العربية</strong></p>
+            <p><strong>عضو لجنة التدريب والتنمية القيادية بالاتحاد العام للكشافة والمرشدات</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/monaAmin.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>منى امين مرسي</h3>
+            <h4>ليسانس اداب قسم تاريخ</h4>
+            <h4>قائدة تدريب</h4>
+            <p><strong>مفوضة التدريب الاهلي عضو اللجنة الاقليمية العربية</strong></p>
+            <p><strong>عضو لجنة التدريب والتنمية القيادية بالاتحاد العام للكشافة والمرشدات</strong></p>
+        </div>
+    </div>
+
+    <div class="alt-profile-card">
+        <img src="../assets/monaAmin.png" alt="Person 3">
+        <div class="profile-details">
+            <h3>منى امين مرسي</h3>
+            <h4>ليسانس اداب قسم تاريخ</h4>
+            <h4>قائدة تدريب</h4>
+            <p><strong>مفوضة التدريب الاهلي عضو اللجنة الاقليمية العربية</strong></p>
+            <p><strong>عضو لجنة التدريب والتنمية القيادية بالاتحاد العام للكشافة والمرشدات</strong></p>
+        </div>
+    </div>
+
+    
+</div>
+
+
+
+    <footer>
+        <p>&copy; 2025 Egyptian Girl Guides Association. Designed with love and dedication. <a id="contact-us-link">Contact Us</a></p>
+    </footer>
+
+    <script>
+        const languageSwitcher = document.getElementById('language-switcher');
+
+        languageSwitcher.addEventListener('click', () => {
+            const currentLang = languageSwitcher.textContent.trim();
+            const isArabic = currentLang === 'العربية';
+
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
+            });
+
+            languageSwitcher.textContent = isArabic ? 'English' : 'العربية';
+            document.documentElement.lang = isArabic ? 'ar' : 'en';
+            document.body.style.direction = isArabic ? 'rtl' : 'ltr';
+        });
+    </script>
+
+</body>
+</html>

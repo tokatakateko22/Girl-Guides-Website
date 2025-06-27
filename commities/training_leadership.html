@@ -122,6 +122,46 @@
             background-color: var(--yellow);
             color: var(--dark-green);
         }
+
+        .all-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.resource-card {
+    width: 300px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card img {
+    width: 100%;
+    height: auto;
+}
+
+.resource-card h4 {
+    margin: 15px 0 10px;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.resource-card p {
+    padding: 0 10px 20px;
+    font-size: 16px;
+    color: #333;
+}
+
     </style>
     <link rel="stylesheet" href="../css/training_leadership.css">
 </head>
@@ -178,6 +218,30 @@
             </div>
         </div>
     </div>
+
+    <div class="all-section">
+
+    <a href="target-page.html" style="text-decoration: none; color: inherit;">
+  <div class="resource-card">
+    <img src="../assets/background.jpg" alt="Book Page" />
+    <h4>خطة لجنة التدريب والتنمية القيادية 2024-2025</h4>
+  </div>
+</a>
+
+
+    <div class="resource-card">
+        <img src="../assets/background.jpg" alt="PDF" />
+        <h4>مدربات لجنة التدريب</h4> 
+    </div>
+
+    <a href="lagnet_tadrib_markazi.html" style="text-decoration: none; color: inherit;">
+    <div class="resource-card">
+        <img src="../assets/background.jpg" alt="PDF" />
+        <h4>لجنة التدريب المركزي</h4>
+    </div>
+    </a>
+</div>
+
 
     <footer>
         <p data-en="© 2025 Egyptian Girl Guides Association. Designed with love and dedication." 
