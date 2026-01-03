@@ -1,0 +1,132 @@
+/* Profile Cards Container (Unused in current HTML but preserved) */
+.profile-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: var(--gray);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    gap: 20px;
+    transition: transform 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--dark-green);
+}
+
+/* Scoped profile details for profile-card if used */
+.profile-card .profile-details {
+    text-align: right;
+    flex: 1;
+}
+
+.profile-card .profile-details h3 {
+    margin: 0;
+    color: var(--dark-green);
+    font-size: 20px;
+}
+
+.profile-card .profile-details h4 {
+    margin: 5px 0;
+    color: var(--medium-green);
+    font-size: 16px;
+}
+
+.profile-card .profile-details p {
+    margin: 10px 0 0;
+    color: #333;
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-card .profile-details {
+        text-align: center;
+    }
+}
+
+/* Alternative Profile Cards (Used in HTML) */
+.alt-profile-cards-container,
+.alt-profile-cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.single-profile-card-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.alt-profile-card {
+    width: 280px;
+    background-color: var(--gray);
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+    direction: rtl;
+}
+
+.alt-profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.alt-profile-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.alt-profile-card .profile-details {
+    padding: 20px;
+}
+
+.alt-profile-card .profile-details h3 {
+    margin: 0 0 8px;
+    color: var(--dark-green);
+    font-size: 20px;
+    text-align: center;
+}
+
+.alt-profile-card .profile-details h4 {
+    margin: 0 0 6px;
+    color: var(--medium-green);
+    font-size: 16px;
+    text-align: center;
+}
+
+.alt-profile-card .profile-details p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin: 6px 0 0;
+    text-align: center;
+}
