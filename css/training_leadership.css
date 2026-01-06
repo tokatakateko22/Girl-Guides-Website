@@ -60,3 +60,42 @@
   color: #444;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.all-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.resource-card {
+    width: 300px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-card img {
+    width: 100%;
+    height: auto;
+}
+
+.resource-card h4 {
+    margin: 15px 0 10px;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.resource-card p {
+    padding: 0 10px 20px;
+    font-size: 16px;
+    color: #333;
+}

@@ -1,141 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scout Organization</title>
-    <style>
-        :root {
-            --dark-green: #126435;
-            --yellow: #f8de1c;
-            --medium-green: #36792b;
-            --light-green: #63912c;
-            --gray: #c9d6ce;
-            --olive: #8faa2d;
-            --sage: #739683;
-            --white: #ffffff;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--white);
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--dark-green);
-            padding: 10px 20px;
-        }
-
-        .navbar img {
-            height: 50px;
-        }
-
-        .navbar-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .navbar a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 18px;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .navbar a:hover {
-            background-color: var(--yellow);
-            color: var(--dark-green);
-        }
-
-        .language-switcher {
-            margin-inline-start: auto;
-            color: var(--white);
-            cursor: pointer;
-            font-size: 16px;
-            background-color: var(--medium-green);
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .language-switcher:hover {
-            background-color: var(--yellow);
-            color: var(--dark-green);
-        }
-
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            padding: 10px 0;
-            background-color: var(--medium-green);
-            color: var(--white);
-        }
-
-        footer a {
-            color: var(--yellow);
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .committee {
-            margin: 20px auto;
-            max-width: 600px;
-            text-align: center;
-            background-color: var(--gray);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .committee h3 {
-            margin: 0 0 10px;
-            color: var(--dark-green);
-        }
-
-        .committee button {
-            padding: 10px 20px;
-            background-color: var(--dark-green);
-            color: var(--white);
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        .committee button:hover {
-            background-color: var(--yellow);
-            color: var(--dark-green);
-        }
-    </style>
+    <title>Committees - Scout Organization</title>
+    <link rel="stylesheet" href="../css/global.css">
 </head>
+
 <body>
 
     <nav class="navbar">
         <img src="../assets/scoutLogo.jpg" alt="Scout Logo">
         <div class="navbar-links">
-            <a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a>
-            <a href="about_us.html" data-en="About Us" data-ar="من نحن">About Us</a>
-            <a href="high_board.html" data-en="High Board" data-ar="المجلس الأعلى">High Board</a>
+            <a href="../index.html" data-en="Home" data-ar="الرئيسية">Home</a>
+            <a href="../about_us.html" data-en="About Us" data-ar="من نحن">About Us</a>
+            <a href="../high_board.html" data-en="High Board" data-ar="المجلس">High Board</a>
             <a href="committees.html" data-en="Committees" data-ar="اللجان">Committees</a>
-            <a href="activities.html" data-en="Activities" data-ar="الأنشطة">Activities</a>
-            <a href="resources.html" data-en="Resources" data-ar="الموارد">Resources</a>
-            <a href="signup_login.html" data-en="Sign Up / Login" data-ar="تسجيل الدخول / إنشاء حساب">Sign Up / Login</a>
+            <a href="../activities.html" data-en="Activities" data-ar="الأنشطة">Activities</a>
+            <a href="../resources.html" data-en="Resources" data-ar="الموارد">Resources</a>
+            <!-- <a href="../signup_login.html" data-en="Sign Up / Login" data-ar="تسجيل الدخول / إنشاء حساب">Sign Up /
+                Login</a> -->
         </div>
         <button class="language-switcher" id="language-switcher">العربية</button>
     </nav>
@@ -144,13 +29,17 @@
         <h1 data-en="Committees" data-ar="اللجان">Committees</h1>
 
         <div class="committee">
-            <h3 data-en="Training and Leadership Development Committee" data-ar="لجنة التدريب والتنمية القيادية">Training and Leadership Development Committee</h3>
-            <button onclick="location.href='training_leadership.html'" data-en="Learn More" data-ar="المزيد">Learn More</button>
+            <h3 data-en="Training and Leadership Development Committee" data-ar="لجنة التدريب والتنمية القيادية">
+                Training and Leadership Development Committee</h3>
+            <button onclick="location.href='training_leadership.html'" data-en="Learn More" data-ar="المزيد">Learn
+                More</button>
         </div>
 
         <div class="committee">
-            <h3 data-en="Programs and Phases Development Committee" data-ar="لجنة البرامج وتنمية المراحل">Programs and Phases Development Committee</h3>
-            <button onclick="location.href='programs_phases.html'" data-en="Learn More" data-ar="المزيد">Learn More</button>
+            <h3 data-en="Programs and Phases Development Committee" data-ar="لجنة البرامج وتنمية المراحل">Programs and
+                Phases Development Committee</h3>
+            <button onclick="location.href='programs_phases.html'" data-en="Learn More" data-ar="المزيد">Learn
+                More</button>
         </div>
 
         <div class="committee">
@@ -159,41 +48,41 @@
         </div>
 
         <div class="committee">
-            <h3 data-en="Information Technology Committee" data-ar="لجنة تكنولوجيا المعلومات">Information Technology Committee</h3>
-            <button onclick="location.href='it_committee.html'" data-en="Learn More" data-ar="المزيد">Learn More</button>
+            <h3 data-en="Information Technology Committee" data-ar="لجنة تكنولوجيا المعلومات">Information Technology
+                Committee</h3>
+            <button onclick="location.href='it_home.html'" data-en="Learn More" data-ar="المزيد">Learn
+                More</button>
         </div>
 
         <div class="committee">
-            <h3 data-en="Resources and Partnerships Development Committee" data-ar="لجنة تنمية الموارد والشركات">Resources and Partnerships Development Committee</h3>
-            <button onclick="location.href='resources_partnerships.html'" data-en="Learn More" data-ar="المزيد">Learn More</button>
+            <h3 data-en="Resources and Partnerships Development Committee" data-ar="لجنة تنمية الموارد والشركات">
+                Resources and Partnerships Development Committee</h3>
+            <button onclick="location.href='resources_partnerships.html'" data-en="Learn More" data-ar="المزيد">Learn
+                More</button>
         </div>
 
         <div class="committee">
-            <h3 data-en="Community Service and Development Committee" data-ar="لجنة خدمة وتنمية المجتمع">Community Service and Development Committee</h3>
-            <button onclick="location.href='community_service.html'" data-en="Learn More" data-ar="المزيد">Learn More</button>
+            <h3 data-en="Community Service and Development Committee" data-ar="لجنة خدمة وتنمية المجتمع">Community
+                Service and Development Committee</h3>
+            <button onclick="location.href='community_service.html'" data-en="Learn More" data-ar="المزيد">Learn
+                More</button>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Egyptian Girl Guides Association. Designed with love and dedication. <a id="contact-us-link">Contact Us</a></p>
+        <p>&copy; 2025 Egyptian Girl Guides Association. Designed with love and dedication. <a
+                id="contact-us-link">Contact Us</a></p>
     </footer>
 
-    <script>
-        const languageSwitcher = document.getElementById('language-switcher');
+    <div class="overlay" id="overlay"></div>
 
-        languageSwitcher.addEventListener('click', () => {
-            const currentLang = languageSwitcher.textContent.trim();
-            const isArabic = currentLang === 'العربية';
+    <div class="popup" id="popup">
+        <h2 data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h2>
+        <button class="close-btn" id="close-btn" data-en="Close" data-ar="إغلاق">Close</button>
+    </div>
 
-            document.querySelectorAll('[data-en]').forEach(el => {
-                el.textContent = isArabic ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-            });
-
-            languageSwitcher.textContent = isArabic ? 'English' : 'العربية';
-            document.documentElement.lang = isArabic ? 'ar' : 'en';
-            document.body.style.direction = isArabic ? 'rtl' : 'ltr';
-        });
-    </script>
+    <script src="../js/main.js"></script>
 
 </body>
+
 </html>
